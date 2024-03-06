@@ -1,7 +1,7 @@
 {
     "properties": {
       "appInsightsConfiguration": {
-        "connectionString": "InstrumentationKey=2c7b4067-ce92-4ff4-9c22-70f6b8dbc2eb;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://westus.livediagnostics.monitor.azure.com/"
+        "connectionString": "InstrumentationKey=27c16241-0a93-4c46-ac1e-6b58070def42;IngestionEndpoint=https://westus2-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westus2.livediagnostics.monitor.azure.com/"
       },
       
       "openTelemetryConfiguration": {
