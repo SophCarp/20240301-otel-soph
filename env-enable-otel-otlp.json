@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "appInsightsConfiguration": {},
+    "openTelemetryConfiguration": {
+      "destinationsConfiguration":{
+        "otlpConfiguration": [
+          {
+            "name": "otlp1",
+            "endpoint": "ENDPOINT_URL_1",
+            "insecure": false,
+            "header": "api-key-1=key"
+          },
+          {
+            "name": "otlp2",
+            "endpoint": "ENDPOINT_URL_2",
+            "insecure": true
+          }
+        ]
+      },
+      "logsConfiguration": { 
+        "destinations": ["otlp2"]
+      },
+      "tracesConfiguration":{
+        "destinations": ["otlp1", "otlp2"]
+      },
+      "metricsConfiguration": {
+        "destinations": ["otlp1"]
+      }
+    }
+  }
+}

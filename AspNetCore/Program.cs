@@ -14,6 +14,7 @@
 // limitations under the License.
 // </copyright>
 
+//Importing all these things
 using System.Reflection;
 using Microsoft.Extensions.Options;
 using OpenTelemetry.Exporter;
@@ -23,6 +24,8 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
+//make some variables to initialize different services
+
 var builder = WebApplication.CreateBuilder(args);
 
 // OpenTelemetry
@@ -30,9 +33,6 @@ var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToStrin
 
 // Switch between Zipkin/Jaeger/OTLP/Console by setting UseTracingExporter in appsettings.json.
 var tracingExporter = builder.Configuration.GetValue<string>("UseTracingExporter").ToLowerInvariant();
-
-//Add an activity source!
-
 
 var serviceName = tracingExporter switch
 {
@@ -42,15 +42,17 @@ var serviceName = tracingExporter switch
     _ => "AspNetCoreExampleService",
 };
 
+
+
 Action<ResourceBuilder> configureResource = r => r.AddService(
-    serviceName, serviceVersion: assemblyVersion, serviceInstanceId: Environment.MachineName);
+    serviceName, serviceVersion: assemblyVersion, serviceInstanceId: Environment.MachineName
+);
 
 // Traces
 builder.Services.AddOpenTelemetry().WithTracing(
         builder =>
         {
             builder.AddHttpClientInstrumentation().AddAspNetCoreInstrumentation();
-
             builder.AddOtlpExporter();
             builder.AddConsoleExporter();
         });
@@ -63,8 +65,6 @@ builder.Services.AddOpenTelemetry().WithMetrics(
         builder.AddOtlpExporter();
         builder.AddConsoleExporter();
     });
-
-    
 
 
 

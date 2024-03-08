@@ -1,19 +1,19 @@
 {
-    "properties": {
+  "properties": {
       "appInsightsConfiguration": {
         "connectionString": "InstrumentationKey=27c16241-0a93-4c46-ac1e-6b58070def42;IngestionEndpoint=https://westus2-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westus2.livediagnostics.monitor.azure.com/"
       },
       
-      "openTelemetryConfiguration": {
-        "logsConfiguration":{
-            "destinations": ["appInsights"]
-        },
-        "tracesConfiguration":{
+    "openTelemetryConfiguration": {
+      "logsConfiguration":{
           "destinations": ["appInsights"]
-        },
-        "metricsConfiguration": {
-          "destinations": null
-        }
+      },
+      "tracesConfiguration":{
+        "destinations": ["appInsights"]
+      },
+      "metricsConfiguration": {
+        "destinations": null
       }
     }
   }
+}
