@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using OpenTelemetry;
 using OpenTelemetry.Trace;
+using OpenTelemetry.Metrics;
 
 [ApiController]
 [Route("[controller]")]
@@ -35,15 +36,13 @@ public class WeatherForecastController : ControllerBase
     private static readonly HttpClient HttpClient = new();
 
     private readonly ILogger<WeatherForecastController> logger;
-    private readonly IMeterFactory<WeatherForecastController> metrics;
+    
 
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, MeterProvider metrics)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
         this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-        //Trying to add metrics
-        this.metrics = metrics ?? throw new ArgumentNullException(nameof(metrics));
     }
 
     [HttpGet]
@@ -52,11 +51,7 @@ public class WeatherForecastController : ControllerBase
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
         using var scope = this.logger.BeginScope("{Id}", Guid.NewGuid().ToString("N"));
-        metrics.GetMeter("MyCompany.MyProduct.MyLibrary")
-            .CreateIntCounter("MyCounter")
-            .Add(1, new KeyValuePair<string, object>("key1", "value"));
-
-
+        
         //Makes a tracer provider variable
         var tracerProvider = Sdk.CreateTracerProviderBuilder()
             .AddSource("MyCompany.MyProduct.MyLibrary")

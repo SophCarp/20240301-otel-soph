@@ -48,7 +48,7 @@ Action<ResourceBuilder> configureResource = r => r.AddService(
     serviceName, serviceVersion: assemblyVersion, serviceInstanceId: Environment.MachineName
 );
 
-// Traces
+// Adding traces
 builder.Services.AddOpenTelemetry().WithTracing(
         builder =>
         {
@@ -57,11 +57,13 @@ builder.Services.AddOpenTelemetry().WithTracing(
             builder.AddConsoleExporter();
         });
 
+// Adding metrics
 builder.Services.AddOpenTelemetry().WithMetrics(
     builder =>
     {
         builder.AddHttpClientInstrumentation().AddAspNetCoreInstrumentation();
-
+        builder.AddAspNetCoreInstrumentation();
+        builder.AddMeter("weather_forecast_count");
         builder.AddOtlpExporter();
         builder.AddConsoleExporter();
     });
@@ -73,7 +75,6 @@ builder.Services.Configure<AspNetCoreInstrumentationOptions>(builder.Configurati
 
 // Logging
 builder.Logging.ClearProviders();
-
 builder.Logging.AddOpenTelemetry(options =>
 {
     // Switch between Console/OTLP by setting UseLogExporter in appsettings.json.
@@ -102,7 +103,6 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
