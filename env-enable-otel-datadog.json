@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "openTelemetryConfiguration": {
+      "destinationsConfiguration":{
+        "dataDogConfiguration":{
+          "site": "us3.datadoghq.com",
+          "key": "fc8d2e785a30993b1ec7f81d1f154323"
+        }
+      },
+      "logsConfiguration":null,
+      "tracesConfiguration":{
+        "destinations": ["dataDog"]
+      },
+      "metricsConfiguration": {
+        "destinations": ["dataDog"]
+      }
+    }
+  }
+}

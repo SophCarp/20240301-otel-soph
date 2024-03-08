@@ -31,6 +31,9 @@ var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToStrin
 // Switch between Zipkin/Jaeger/OTLP/Console by setting UseTracingExporter in appsettings.json.
 var tracingExporter = builder.Configuration.GetValue<string>("UseTracingExporter").ToLowerInvariant();
 
+//Add an activity source!
+
+
 var serviceName = tracingExporter switch
 {
     "jaeger" => builder.Configuration.GetValue<string>("Jaeger:ServiceName"),
@@ -51,6 +54,19 @@ builder.Services.AddOpenTelemetry().WithTracing(
             builder.AddOtlpExporter();
             builder.AddConsoleExporter();
         });
+
+builder.Services.AddOpenTelemetry().WithMetrics(
+    builder =>
+    {
+        builder.AddHttpClientInstrumentation().AddAspNetCoreInstrumentation();
+
+        builder.AddOtlpExporter();
+        builder.AddConsoleExporter();
+    });
+
+    
+
+
 
 // For options which can be bound from IConfiguration.
 builder.Services.Configure<AspNetCoreInstrumentationOptions>(builder.Configuration.GetSection("AspNetCoreInstrumentation"));
