@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "openTelemetryConfiguration": {
+      "destinationsConfiguration":{
+        "otlpConfiguration": null,
+        "dataDogConfiguration": {
+          "site": null
+        }
+      },
+      "logsConfiguration":null,
+      "tracesConfiguration":null,
+      "metricsConfiguration": null
+    }
+  }
+}

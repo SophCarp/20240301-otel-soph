@@ -8,7 +8,7 @@
             "name": "otlp1",
             "endpoint": "ENDPOINT_URL_1",
             "insecure": false,
-            "header": "api-key-1=key"
+            "headers": "api-key-1=key"
           },
           {
             "name": "otlp2",
