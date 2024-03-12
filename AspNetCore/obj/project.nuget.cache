@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BFr/mLR9cHfTCpGZ+aDsUiH3i2+FZOA/poRInJkNCD3tvJNMV4n+qOCRVh3CMV1vFQE3ts1INHnbGaTYwwakwQ==",
+  "dgSpecHash": "FuPFy2KPvGYcyjPyN2ujV47V0R3izybboOioH3yShAEzuYAIGpQUYBeEBN7r6bod2V/JYHYNshfV+iUtlSQ9Rw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\socarpenter\\testing\\20240301-otel-soph\\AspNetCore\\Examples.AspNetCore.csproj",
+  "projectFilePath": "C:\\Users\\socarpenter\\testing\\20240311-otel-stage\\AspNetCore\\Examples.AspNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\socarpenter\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\grpc.core.api\\2.43.0\\grpc.core.api.2.43.0.nupkg.sha512",

@@ -11,17 +11,17 @@
             "headers": [
               {
                 "key":"honecombingestapi",
-                "value": "hcaik_01hrqmkj64qd6vgrv3xfq5j6x4acnwn7m641vvk2hbed3bgnvsnbj99374"
+                "value": "API_KEY"
               }
             ]
           }
        ]
       },
       "logsConfiguration": { 
-        "destinations": null
+        "destinations": ["honeycomb"]
       },
       "tracesConfiguration":{
-        "destinations": null
+        "destinations": ["honeycomb"]
       },
       "metricsConfiguration": {
         "destinations": null

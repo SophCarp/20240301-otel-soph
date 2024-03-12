@@ -1709,11 +1709,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\socarpenter\\testing\\20240301-otel-soph\\AspNetCore\\Examples.AspNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\socarpenter\\testing\\20240311-otel-stage\\AspNetCore\\Examples.AspNetCore.csproj",
       "projectName": "Examples.AspNetCore",
-      "projectPath": "C:\\Users\\socarpenter\\testing\\20240301-otel-soph\\AspNetCore\\Examples.AspNetCore.csproj",
+      "projectPath": "C:\\Users\\socarpenter\\testing\\20240311-otel-stage\\AspNetCore\\Examples.AspNetCore.csproj",
       "packagesPath": "C:\\Users\\socarpenter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\socarpenter\\testing\\20240301-otel-soph\\AspNetCore\\obj\\",
+      "outputPath": "C:\\Users\\socarpenter\\testing\\20240311-otel-stage\\AspNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\socarpenter\\AppData\\Roaming\\NuGet\\NuGet.Config",
