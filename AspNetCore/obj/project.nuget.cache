@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FuPFy2KPvGYcyjPyN2ujV47V0R3izybboOioH3yShAEzuYAIGpQUYBeEBN7r6bod2V/JYHYNshfV+iUtlSQ9Rw==",
+  "dgSpecHash": "tfJgzSGHujkyM/GyEcqVNXYPULizpIsECeq4JNLsIGlvzcewUbKI/dmgZAEZ2L1tOupBBMuKmqiWZwY2BZNw6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\socarpenter\\testing\\20240311-otel-stage\\AspNetCore\\Examples.AspNetCore.csproj",
+  "projectFilePath": "C:\\Users\\socarpenter\\testing\\20240311-otel-bugbash\\AspNetCore\\Examples.AspNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\socarpenter\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\grpc.core.api\\2.43.0\\grpc.core.api.2.43.0.nupkg.sha512",
@@ -46,10 +46,10 @@
     "C:\\Users\\socarpenter\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\socarpenter\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\socarpenter\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Examples.AspNetCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6781fe45d723c2325ea752b4d45426aa67357a5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dc20139eb462bff9a9fe1b01ca2b267acc3a584")]
 [assembly: System.Reflection.AssemblyProductAttribute("Examples.AspNetCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Examples.AspNetCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
